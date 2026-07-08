@@ -4,20 +4,12 @@ export const Navitems= [
         path: "/hosting",
         submenu: [
       {
-        title: "Shared Hosting",
-        path: "/hosting/shared",
-      },
-      {
-        title: "Hosting for WordPress",
-        path: "/hosting/wordpress",
-      },
-      {
         title: "VPS Hosting",
-        path: "/hosting/vps",
+        path: "/vpshosting",
       },
       {
         title: "Dedicated Server",
-        path: "/hosting/dedicated",
+        path: "/dedicatedhosting",
       },
     ],
     },
