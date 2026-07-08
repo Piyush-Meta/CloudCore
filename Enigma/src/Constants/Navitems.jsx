@@ -1,7 +1,6 @@
 export const Navitems= [
     {
         title: "Hosting",
-        path: "/hosting",
         submenu: [
       {
         title: "VPS Hosting",

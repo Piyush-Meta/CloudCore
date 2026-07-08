@@ -25,9 +25,9 @@ const handleMouseLeave = () => {
         />
 </div>
         {/* Navigation */}
-        <div>
+        <div className ="justify-center items-center flex-1">
         <nav>
-          <ul className="flex space-x-7">
+          <ul className="flex justify-center items-center space-x-7">
             {Navitems.map((item) => (
               <li
                 key={item.title}
@@ -39,7 +39,7 @@ const handleMouseLeave = () => {
                   to={item.path}
                   className={({ isActive }) =>
                       isActive
-                        ? "text-blue-600"
+                        ? "text-blue-600 font-bold underline decoration-2 underline-offset-4 decoration-blue-600"
                         : "text-gray-500 hover:text-blue-600 font-bold"
                     
                   }
