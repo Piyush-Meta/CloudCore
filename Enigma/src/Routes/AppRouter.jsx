@@ -1,6 +1,8 @@
 import {createBrowserRouter} from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../Pages/Home";
+import VPShosting from "../Pages/VPShosting";
+import DedicatedHosting from "../Pages/DedicatedHosting";
 import Servers from "../Pages/Servers";
 import Hardware from "../Components/BillingCycle/Hardware/Hardware";
 const AppRouter = createBrowserRouter([
@@ -12,6 +14,14 @@ const AppRouter = createBrowserRouter([
             index: true,
             element: <Home />
         },
+        {
+            path:"/VPShosting",
+            element: <VPShosting />
+        },
+        {
+            path:"/DedicatedHosting",
+            element: <DedicatedHosting />
+        }
         {
             path:"servers",
             element: <Servers />

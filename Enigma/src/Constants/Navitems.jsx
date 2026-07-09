@@ -1,7 +1,16 @@
 export const Navitems= [
     {
         title: "Hosting",
-        path: "/hosting"
+        submenu: [
+      {
+        title: "VPS Hosting",
+        path: "/vpshosting",
+      },
+      {
+        title: "Dedicated Server",
+        path: "/dedicatedhosting",
+      },
+    ],
     },
     {
         title: "Servers",
@@ -9,7 +18,21 @@ export const Navitems= [
     },
     {
         title: "Security",
-        path: "/security"
+        path: "/security",
+         submenu: [
+      {
+        title: "SSL Certificates",
+        path: "/security/ssl",
+      },
+      {
+        title: "Domain Privacy",
+        path: "/security/privacy",
+      },
+      {
+        title: "CDN",
+        path: "/security/cdn",
+      },
+    ],
     },
     {
         title: "Help Center",
