@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../Pages/Home";
 import VPShosting from "../Pages/VPShosting";
 import DedicatedHosting from "../Pages/DedicatedHosting";
+import Login from "../auth/Login";
+import Signup from "../auth/Signup";
 const AppRouter = createBrowserRouter([
     {
     path: "/",
@@ -19,8 +21,16 @@ const AppRouter = createBrowserRouter([
         {
             path:"/DedicatedHosting",
             element: <DedicatedHosting />
-        }
+        } 
     ]
-}
+},
+ {
+    path: "/login",
+    element: <Login />
+},
+{
+    path: "/signup",
+    element: <Signup />
+},
 ]);
 export default AppRouter;
