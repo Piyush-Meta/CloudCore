@@ -2,6 +2,10 @@ import { useState,useRef } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { Navitems } from "../../Constants/Navitems";
+import Login from  "../../Auth/Login";
+import { Link } from "react-router-dom";
+import { ShoppingCart } from "lucide-react";
+//import Cart from "./Cart";
 
 const Header = () => {
 const [openMenu, setOpenMenu] = useState(null);
@@ -18,12 +22,14 @@ const handleMouseLeave = () => {
   return (
     <header className="flex items-center text-black px-4 py-2 border-b border-gray-300 shadow-md">
       <div className="w-30 mx-8 py-4">
+      <Link to ="/" >
         <img
           src={logo}
           alt="Enigma Logo"
           className="w-auto cursor-pointer"
         />
-</div>
+        </Link>
+        </div>
         {/* Navigation */}
         <div className ="justify-center items-center flex-1">
         <nav>
@@ -39,7 +45,7 @@ const handleMouseLeave = () => {
                   to={item.path}
                   className={({ isActive }) =>
                       isActive
-                        ? "text-blue-600 font-bold underline decoration-2 underline-offset-4 decoration-blue-600"
+                        ? "text-blue-600 font-bold underline decoration-2 underline-offset-4 decoration-blue-600s"
                         : "text-gray-500 hover:text-blue-600 font-bold"
                     
                   }
@@ -88,13 +94,13 @@ const handleMouseLeave = () => {
 </div>
 
         <div className="ml-auto flex items-center gap-6">
-          <button className="font-semibold text-blue-600 transition hover:text-blue-700">
-            Contact Sales
+         {/* <Cart /> */}
+ <Link to ="/login">
+          <button className="rounded-lg bg-blue-600 px-5 py-2.5 font-semibold text-white transition hover:bg-blue-700 cursor-pointer"
+          >
+            Sign in
           </button>
-
-          <button className="rounded-lg bg-blue-600 px-5 py-2.5 font-semibold text-white transition hover:bg-blue-700">
-            Client Portal
-          </button>
+          </Link>
         </div>
       
     </header>
