@@ -7,6 +7,8 @@ import Servers from "../Pages/Servers";
 import Hardware from "../Components/BillingCycle/Hardware/Hardware";
 import HardwareSection from "../Components/BillingCycle/Hardware/HardwareSection";
 import Software from "../Components/BillingCycle/Software/Software";
+import Login from "../auth/Login";
+import Signup from "../auth/Signup";
 const AppRouter = createBrowserRouter([
     {
     path: "/",
@@ -40,7 +42,16 @@ const AppRouter = createBrowserRouter([
             path:"software",
             element: <Software/>
         },
+        
     ]
-}
+},
+ {
+    path: "/login",
+    element: <Login />
+},
+{
+    path: "/signup",
+    element: <Signup />
+},
 ]);
 export default AppRouter;
