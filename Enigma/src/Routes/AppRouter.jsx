@@ -9,6 +9,8 @@ import HardwareSection from "../Components/BillingCycle/Hardware/HardwareSection
 import Software from "../Components/BillingCycle/Software/Software";
 import Login from "../auth/Login";
 import Signup from "../auth/Signup";
+import Security from "../Components/BillingCycle/Billing/Security";
+import Docs from "../Components/BillingCycle/Docs/Docs";
 const AppRouter = createBrowserRouter([
     {
     path: "/",
@@ -41,6 +43,14 @@ const AppRouter = createBrowserRouter([
          {
             path:"software",
             element: <Software/>
+        },
+         {
+            path:"security",
+            element: <Security/>
+        },
+         {
+            path:"docs",
+            element: <Docs/>
         },
         
     ]
