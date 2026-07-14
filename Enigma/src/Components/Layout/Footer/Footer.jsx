@@ -22,12 +22,13 @@ const Footer = () => {
             </p>
             <div className="mt-8 flex gap-4">
               {socialIcons.map((Icon, index) => (
-                <button
-                  key={index}
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow hover:bg-blue-600 hover:text-white transition"
-                >
+                <a
+                 key={index}
+    href="#"
+    className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow transition hover:bg-blue-600 hover:text-white"
+>
                   <Icon size={18} />
-                </button>
+                </a>
               ))}
             </div>
           </div>

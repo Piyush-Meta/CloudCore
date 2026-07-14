@@ -1,27 +1,43 @@
-// //import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
-// const Carts = () => {
+const Carts = () => {
+  const cartItems = useSelector(
+    (store) => store.cart.items
+  );
 
-//     const cartItems = useSelector(
-//         (store) => store.cart.items
-//     );
+  return (
+    <div className="max-w-6xl mx-auto mt-10 space-y-6">
+      {cartItems.map((item) => (
+        <div
+          key={`${item.id}-${item.billing}`}
+          className="rounded-xl border p-6"
+        >
+          <h2 className="text-2xl font-bold">
+            {item.title}
+          </h2>
 
-//     return (
+          <p>{item.subtitle}</p>
 
-//         <div>
+          <p>
+            Billing : {item.billing}
+          </p>
 
-//             {cartItems.map((item) => (
+          <p>
+            Price : ${item.selectedPrice}
+          </p>
 
-//                 <h2 key={item.id}>
-//                     {item.title}
-//                 </h2>
+          <p>
+            Quantity : {item.quantity}
+          </p>
 
-//             ))}
+          <p className="font-bold">
+            Total :
+            ${item.selectedPrice * item.quantity}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-//         </div>
-
-//     );
-
-// };
-
-// export default Carts;
+export default Carts;

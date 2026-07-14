@@ -1,53 +1,102 @@
-import { Globe, AtSign, Share2, ShieldCheck } from "lucide-react";
+import {
+  Globe,
+  
+  ShieldCheck,
+} from "lucide-react";
 
 export const footerLinks = [
   {
-    title: "Products",
+    title: "Hosting",
     links: [
-      "VPS Hosting",
-      "Dedicated Servers",
-      "Managed WP",
-      "Cloud Storage",
+      {
+        name: "Hosting Overview",
+        path: "/hosting",
+      },
+      {
+        name: "VPS Hosting",
+        path: "/vpshosting",
+      },
+      {
+        name: "Dedicated Hosting",
+        path: "/dedicatedhosting",
+      },
     ],
   },
+
   {
-    title: "Resources",
+    title: "Security",
     links: [
-      "Status Page",
-      "Documentation",
-      "API Reference",
-      "SLA Guarantee",
+      {
+        name: "Security Overview",
+        path: "/security",
+      },
+      {
+        name: "SSL Certificates",
+        path: "/security/ssl",
+      },
+      {
+        name: "Firewall Protection",
+        path: "/security/firewall",
+      },
+      {
+        name: "DDoS Protection",
+        path: "/security/ddos",
+      },
     ],
   },
-  {
-    title: "Company",
-    links: [
-      "About Us",
-      "Privacy Policy",
-      "Terms of Service",
-      "Careers",
-    ],
-  },
+
   {
     title: "Support",
     links: [
-      "Help Center",
-      "Contact Us",
-      "Network Map",
-      "Abuse Report",
+      {
+        name: "Help Center",
+        path: "/help-center",
+      },
+      {
+        name: "Contact Support",
+        path: "/help-center/contact-support",
+      },
+      {
+        name: "Community Forum",
+        path: "/help-center/community-forum",
+      },
+      {
+        name: "System Status",
+        path: "/help-center/system-status",
+      },
+    ],
+  },
+
+  {
+    title: "Company",
+    links: [
+      {
+        name: "About Us",
+        path: "/about",
+      },
+      {
+        name: "Privacy Policy",
+        path: "/privacy-policy",
+      },
+      {
+        name: "Terms of Service",
+        path: "/terms",
+      },
+      {
+        name: "Careers",
+        path: "/careers",
+      },
     ],
   },
 ];
 
 export const socialIcons = [
-  Globe,
-  AtSign,
-  Share2,
+    Globe,
 ];
 
 export const bottomText = {
   copyright:
-    "© 2024 CloudCore Pro. All rights reserved. ISO 27001 Certified.",
-  security: "Secure Infrastructure",
+    "© 2026 CloudCore Pro. All rights reserved.",
+  security: "Enterprise Grade Security",
   icon: ShieldCheck,
 };
