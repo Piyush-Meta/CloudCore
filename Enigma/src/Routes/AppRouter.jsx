@@ -9,6 +9,11 @@ import HardwareSection from "../Components/BillingCycle/Hardware/HardwareSection
 import Software from "../Components/BillingCycle/Software/Software";
 import Login from "../auth/Login";
 import Signup from "../auth/Signup";
+import Carts from "../Pages/Carts";
+import HelpCenter from "../Pages/HelpCenter";
+import Security from "../Pages/Security";
+import Hosting from "../Pages/Hosting";
+import About from "../Pages/About";
 const AppRouter = createBrowserRouter([
     {
     path: "/",
@@ -19,11 +24,11 @@ const AppRouter = createBrowserRouter([
             element: <Home />
         },
         {
-            path:"/VPShosting",
+            path:"vpshosting",
             element: <VPShosting />
         },
         {
-            path:"/DedicatedHosting",
+            path:"dedicatedhosting",
             element: <DedicatedHosting />
         },
         {
@@ -41,11 +46,25 @@ const AppRouter = createBrowserRouter([
          {
             path:"software",
             element: <Software/>
+        },{
+            path:"carts",
+            element: <Carts/>
+        },{
+            path:"/help-center",
+            element: <HelpCenter/>
         },
-        
+        {
+            path:"/security",
+            element: <Security/>
+        },{
+            path:"/hosting",
+            element: <Hosting/>
+        },{
+            path: "/about",
+            element: <About/>
+        }
     ]
-},
- {
+}, {
     path: "/login",
     element: <Login />
 },

@@ -5,8 +5,8 @@ import { Navitems } from "../../Constants/Navitems";
 import Login from  "../../Auth/Login";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
-//import Cart from "./Cart";
-
+import Cart from "./Cart";
+import Carts from "../../Pages/Carts";
 const Header = () => {
 const [openMenu, setOpenMenu] = useState(null);
 const timeoutRef = useRef(null);
@@ -72,7 +72,7 @@ const handleMouseLeave = () => {
                 </NavLink>
             
                 {item.submenu && openMenu === item.title && (
-                  <div className="absolute left-0 top-full  w-64 rounded-xl border border-gray-200 bg-white shadow-xl">
+                  <div className="absolute left-0 top-full z-50 w-64 rounded-xl border border-gray-200 bg-white shadow-xl">
                     <ul className="py-2">
                       {item.submenu.map((subItem) => (
                         <li key={subItem.path}>
@@ -94,7 +94,9 @@ const handleMouseLeave = () => {
 </div>
 
         <div className="ml-auto flex items-center gap-6">
-         {/* <Cart /> */}
+          <Cart/>
+        
+        
  <Link to ="/login">
           <button className="rounded-lg bg-blue-600 px-5 py-2.5 font-semibold text-white transition hover:bg-blue-700 cursor-pointer"
           >

@@ -1,6 +1,15 @@
+import { useDispatch } from "react-redux";
+import { addItem } from "../../Utils/CartSlice";
 const PricingCard = ({ plan, yearly }) => {
   const price = yearly ? plan.yearlyPrice : plan.monthlyPrice;
-
+  const dispatch = useDispatch();
+const handleAddToCart = () => {
+  dispatch( addItem({
+      ...plan,
+      selectedPrice: yearly ? plan.yearlyPrice : plan.monthlyPrice,
+      billing: yearly ? "Yearly" : "Monthly",
+    }));
+};
   return (
     <div
       className={`relative rounded-2xl border bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
@@ -49,6 +58,7 @@ const PricingCard = ({ plan, yearly }) => {
       </ul>
 
       <button
+        onClick={handleAddToCart}
         className={`mt-10 w-full rounded-lg py-4 font-semibold transition ${
           plan.popular
             ? "bg-blue-600 text-white hover:bg-blue-700"
