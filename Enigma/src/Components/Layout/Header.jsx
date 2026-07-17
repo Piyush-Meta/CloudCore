@@ -95,8 +95,6 @@ const handleMouseLeave = () => {
 
         <div className="ml-auto flex items-center gap-6">
           <Cart/>
-        
-        
  <Link to ="/login">
           <button className="rounded-lg bg-blue-600 px-5 py-2.5 font-semibold text-white transition hover:bg-blue-700 cursor-pointer"
           >

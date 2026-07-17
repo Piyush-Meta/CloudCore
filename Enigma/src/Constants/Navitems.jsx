@@ -8,14 +8,10 @@ export const Navitems= [
         path: "/vpshosting",
       },
       {
-        title: "Dedicated Server",
+        title: "Dedicated Hosting",
         path: "/dedicatedhosting",
       },
     ],
-    },
-    {
-        title: "Servers",
-        path: "/servers"
     },
     {
         title: "Security",
@@ -43,18 +39,10 @@ export const Navitems= [
         title: "Contact Support",
         path: "/help-center/contact-support",
       },
-      {
-        title: "System Status",
-        path: "/help-center/system-status",
-      },
-      {
-        title: "Community Forum",
-        path: "/help-center/community-forum",
-      },
-      {
-        title: "Report Abuse",
-        path: "/help-center/report-abuse",
-      },
+     {
+      title:"Chat with us",
+      path: "/help-center/chat-with-us",
+     }
     ],
     }
   

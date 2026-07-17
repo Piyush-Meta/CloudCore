@@ -2,13 +2,16 @@ import React from 'react'
 import RamSliderCard from '../Components/RamSlider/RamSliderCard'
 import PricingGrid from '../Components/PricingPlan/PricingPlans'
 import FAQSection from '../Components/Faq/FaqSection'
-
-const Servers = () => {
+import {useLocation} from "react-router-dom"
+const Servers = (defaultram, storage, network) => {
+  const location = useLocation();
+  const { state } = location;
+  //console.log("Received state:", state); // Debugging line to check the received state
   return (
     <div>
-      <section class="mb-xl mt-10 text-center ">
-      <h1 class="font-bold text-xl mb-5">Scale Your Vision with High-Performance VPS</h1>
-      <p class="font-body-lg text-body-lg text-lg text-gray-700 max-w-2xl mx-auto">
+      <section className="mb-xl mt-10 text-center ">
+      <h1 className="font-bold text-xl mb-5">Scale Your Vision with High-Performance VPS</h1>
+      <p className="font-body-lg text-body-lg text-lg text-gray-700 max-w-2xl mx-auto">
                 Next-generation virtual private servers powered by NVMe storage and isolated environments. Pick a plan or customize your resources below.
       </p>
       </section>
@@ -16,10 +19,13 @@ const Servers = () => {
       {/*  Dynamic Configuration (Active Interaction: RAM Slider)  */}
 
       <div className='-mt-19'>
-        <RamSliderCard/>
+        <RamSliderCard
+        defaultram={state.defaultram}
+      storage={state.storage}
+      network={state.network}
+        />
         <PricingGrid/>
       </div>
-
       <section className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 mb-8 p-15 -mt-19">
       <div className="md:col-span-2 md:row-span-2 bg-[#091c35] p-10 rounded-xl flex flex-col justify-end text-white min-h-75 md:min-h-auto shadow-md">
         <svg 

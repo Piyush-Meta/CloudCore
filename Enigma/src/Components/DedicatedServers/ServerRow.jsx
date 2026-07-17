@@ -1,3 +1,5 @@
+import {useNavigate} from "react-router-dom";
+import Servers from "../../Pages/Servers";
 const Spec = ({ title, value, dark }) => {
   return (
     <div className="w-44 shrink-0">
@@ -14,8 +16,15 @@ const Spec = ({ title, value, dark }) => {
     </div>
   );
 };
-
 const ServerRow = ({ plan }) => {
+  const navigate = useNavigate();
+  const openserver = (defaultram, storage, network) => {
+    navigate("/servers",{
+      state:{  defaultram, storage, network }
+    })
+    // Handle the button click event here
+    
+  }
   return (
     <div
       className={`rounded-2xl border px-8 py-8 transition-all duration-300 hover:shadow-xl ${
@@ -41,9 +50,7 @@ const ServerRow = ({ plan }) => {
           </p>
         </div>
         {/* mid part */}
-
         <div className="grid flex-1 grid-cols-4 gap-8">
-
           <Spec
             title="CPU"
             value={plan.cpu}
@@ -51,28 +58,29 @@ const ServerRow = ({ plan }) => {
           />
           <Spec
             title="RAM"
-            value={plan.ram}
+            value={plan.ramtext}
             dark={plan.featured}
           />
           <Spec
             title="STORAGE"
-            value={plan.storage}
+            value={plan.storagetext }
             dark={plan.featured}
           />
           <Spec
             title="NETWORK"
-            value={plan.network}
+            value={plan.networktext}
             dark={plan.featured}
           />
         </div>
-
  {/* Right part */}
   <div className="shrink-0 text-right">
     <h2 className="text-5xl font-bold">
       ${plan.price}
       <span className="text-2xl font-medium">/mo</span>
     </h2>
-    <button className="mt-4 rounded-lg bg-blue-600 px-8 py-3 text-white font-semibold hover:bg-blue-700">
+    <button className="mt-4 rounded-lg bg-blue-600 px-8 py-3 text-white font-semibold hover:bg-blue-700"
+    onClick={() => openserver(plan.ram, plan.storage, plan.network  )}
+    >
       Deploy Server
     </button>
   </div>

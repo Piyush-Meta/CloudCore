@@ -2,14 +2,18 @@ import React, { useState, useEffect } from "react";
 import OrderConfiguration from "../BillingCycle/Hardware/Hardware";
 import { Link } from 'react-router-dom'; 
 
-export default function ResourceCustomizer() {
+export default function ResourceCustomizer({ defaultram, storage, network }) {
 
-  const [ram, setRam] = useState(32);
+  const [ram, setRam] = useState(defaultram);
   const [cpu, setCpu] = useState(8);
   const [cost, setCost] = useState(124);
+ // console.log("Received props:", { defaultram, storage, network }); // Debugging line to check the received props
+  useEffect(() => {
+  setRam(defaultram);
+}, [defaultram]);
 
   const minRam = 2;
-  const maxRam = 128;
+  const maxRam = 512;
 
   const minCpu = 1;
   const maxCpu = 32;
