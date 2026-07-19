@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
 import Cart from "./Cart";
 import Carts from "../../Pages/Carts";
+import {ChevronDown} from "lucide-react";
 const Header = () => {
 const [openMenu, setOpenMenu] = useState(null);
 const timeoutRef = useRef(null);
@@ -33,7 +34,7 @@ const handleMouseLeave = () => {
         {/* Navigation */}
         <div className ="justify-center items-center flex-1">
         <nav>
-          <ul className="flex justify-center items-center space-x-7">
+          <ul className="flex justify-center items-center space-x-9">
             {Navitems.map((item) => (
               <li
                 key={item.title}
@@ -41,35 +42,36 @@ const handleMouseLeave = () => {
                 onMouseEnter={() => handleMouseEnter(item.title)}
                 onMouseLeave={handleMouseLeave}
               >
-                <NavLink
-                  to={item.path}
-                  className={({ isActive }) =>
-                      isActive
-                        ? "text-blue-600 font-bold underline decoration-2 underline-offset-4 decoration-blue-600s"
-                        : "text-gray-500 hover:text-blue-600 font-bold"
-                    
-                  }
-                >
-                  {item.title}
+               <NavLink
+  to={item.path}
+  className={({ isActive }) =>
+    `flex items-center gap-1 ${
+      isActive
+        ? "text-blue-600 font-bold underline decoration-2 underline-offset-4 decoration-blue-600"
+        : "text-gray-500 hover:text-blue-600 font-bold"
+    }`
+  }
+>
+  <span>{item.title}</span>
 
-                  {/* {item.submenu && (
-                    <svg
-                      className={`h-4 w-4 transition-transform ${
-                        openMenu === item.title ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M6 9l6 6 6-6"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  )} */}
-                </NavLink>
+  {item.submenu && (
+    <svg
+      className={`w-4 h-4 transition-transform duration-300 ${
+        openMenu === item.title ? "rotate-180" : ""
+      }`}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  )}
+</NavLink>
             
                 {item.submenu && openMenu === item.title && (
                   <div className="absolute left-0 top-full z-50 w-64 rounded-xl border border-gray-200 bg-white shadow-xl">

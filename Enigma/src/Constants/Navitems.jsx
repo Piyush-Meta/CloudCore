@@ -11,6 +11,10 @@ export const Navitems= [
         title: "Dedicated Hosting",
         path: "/dedicatedhosting",
       },
+      {
+        title :"WordPress Hosting",
+        path: "/wordpresshosting",
+      }
     ],
     },
     {

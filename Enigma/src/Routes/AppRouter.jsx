@@ -14,6 +14,7 @@ import HelpCenter from "../Pages/HelpCenter";
 import Security from "../Pages/Security";
 import Hosting from "../Pages/Hosting";
 import About from "../Pages/About";
+import WordPressHosting from "../Pages/WordPressHosting";
 const AppRouter = createBrowserRouter([
     {
     path: "/",
@@ -30,6 +31,9 @@ const AppRouter = createBrowserRouter([
         {
             path:"dedicatedhosting",
             element: <DedicatedHosting />
+        },{
+           path:"wordpresshosting",
+           element: <WordPressHosting />
         },
         {
             path:"/servers",
