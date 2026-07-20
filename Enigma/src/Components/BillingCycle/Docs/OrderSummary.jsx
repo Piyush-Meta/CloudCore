@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function OrderSummary({ status }) {
+export default function OrderSummary({ status="idle" }) {
   return (
-    <div className="bg-gray-100 p-6 rounded-xl border border-gray-200 sticky top-6">
+    <div className="bg-gray-100 p-6 w-80 h-100 rounded-xl border border-gray-200 sticky top-6">
       <h3 className="text-xl font-semibold mb-6">Order Summary</h3>
       
       <div className="space-y-3 border-b border-gray-200 pb-6 mb-6">
@@ -28,7 +28,7 @@ export default function OrderSummary({ status }) {
       <button
         type="submit"
         disabled={status === "loading" || status === "success"}
-        className={`w-full text-white py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 ${
+        className={`w-full text-white  py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 ${
           status === "success"
             ? "bg-green-600"
             : "bg-blue-600 hover:opacity-90 disabled:opacity-80"
@@ -37,7 +37,7 @@ export default function OrderSummary({ status }) {
         {status === "idle" && (
           <>
             Verify & Continue 
-            <span className="material-symbols-outlined">arrow_forward</span>
+            <span className="material-symbols-outlined text-[20px]"></span>
           </>
         )}
         {status === "loading" && (

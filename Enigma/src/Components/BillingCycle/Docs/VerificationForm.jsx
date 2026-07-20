@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function VerificationForm({ formData, setFormData, handleFileChange }) {
+export default function VerificationForm() {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
+const [formData, setFormData] = useState({
+    fullName: "",
+    companyName: "",
+    personalId: "",
+    gstNumber: "",
+  });
 
   return (
-    <div className="bg-white p-6 lg:p-8 rounded-xl border border-gray-200 shadow-sm">
+    <div className="bg-white p-6 w-200 lg:p-8 rounded-xl border border-gray-200 shadow-sm">
       <h2 className="text-2xl font-semibold mb-6">Individual Business Verification</h2>
       
       <div className="space-y-6">

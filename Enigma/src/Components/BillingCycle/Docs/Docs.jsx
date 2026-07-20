@@ -5,11 +5,12 @@ import OrderSummary from './OrderSummary'
 
 
 const Docs = ({ formData, setFormData, handleFileChange, status }) => {
+   console.log(formData);
   return (
     <div>
       <Stepper />
-      
-      <VerificationForm 
+      <div className='flex justify-center gap-10'>
+        <VerificationForm 
         formData={formData}
         setFormData={setFormData} 
         handleFileChange={handleFileChange} 
@@ -17,6 +18,8 @@ const Docs = ({ formData, setFormData, handleFileChange, status }) => {
       
       
       <OrderSummary status={status} />
+      </div>
+      
     </div>
   )
 }

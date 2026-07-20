@@ -1,6 +1,7 @@
 export const Navitems= [
     {
         title: "Hosting",
+        path: "/hosting",
         submenu: [
       {
         title: "VPS Hosting",
@@ -36,7 +37,25 @@ export const Navitems= [
     },
     {
         title: "Help Center",
-        path: "/help-center"
+        path: "/help-center",
+        submenu: [
+      {
+        title: "Contact Support",
+        path: "/help-center/contact-support",
+      },
+      {
+        title: "System Status",
+        path: "/help-center/system-status",
+      },
+      {
+        title: "Community Forum",
+        path: "/help-center/community-forum",
+      },
+      {
+        title: "Report Abuse",
+        path: "/help-center/report-abuse",
+      },
+    ],
     }
   
 ];
