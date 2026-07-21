@@ -14,6 +14,8 @@ import HelpCenter from "../Pages/HelpCenter";
 import Security from "../Pages/Security";
 import Hosting from "../Pages/Hosting";
 import About from "../Pages/About";
+import Docs from "../Components/BillingCycle/Docs/Docs";
+import BillingSecurity from '../Components/BillingCycle/Billing/BillingSecurity'
 const AppRouter = createBrowserRouter([
     {
     path: "/",
@@ -46,6 +48,14 @@ const AppRouter = createBrowserRouter([
          {
             path:"software",
             element: <Software/>
+        },
+         {
+            path:"billingsecurity",
+            element: <BillingSecurity/>
+        },
+         {
+            path:"docs",
+            element: <Docs/>
         },{
             path:"carts",
             element: <Carts/>
@@ -63,6 +73,7 @@ const AppRouter = createBrowserRouter([
             path: "/about",
             element: <About/>
         }
+        
     ]
 }, {
     path: "/login",

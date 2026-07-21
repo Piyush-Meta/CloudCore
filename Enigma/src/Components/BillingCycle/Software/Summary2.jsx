@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Summary2 = () => {
+  const navigate= useNavigate();
   const [selectedOS, setSelectedOS] = useState('ubuntu');
   const [selectedPanel, setSelectedPanel] = useState('none');
   const basePrice = 25.00;
@@ -92,10 +94,10 @@ const Summary2 = () => {
             </div>
           </div>
 
-          {/* Navigation Trigger CTA */}
+          
           <button 
             type="button"
-            onClick={() => navigate('/securitysection')} // Ready for next route step link
+            onClick={() => navigate('/billingsecurity')} // Ready for next route step link
             style={{ backgroundColor: '#0051d5', color: '#ffffff' }}
             className="w-full py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:opacity-95 hover:scale-[1.01] active:scale-95 transition-all duration-200 shadow-lg shadow-blue-700/20 group"
           >
