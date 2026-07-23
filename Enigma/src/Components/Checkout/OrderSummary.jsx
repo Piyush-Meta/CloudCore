@@ -32,7 +32,7 @@ const OrderSummary = ({ items }) => {
         <div className="flex justify-between">
           <span className="text-gray-500">Subtotal</span>
           <span className="font-semibold">
-            ₹{subtotal.toLocaleString()}
+            ${subtotal.toLocaleString()}
           </span>
         </div>
 
@@ -42,7 +42,7 @@ const OrderSummary = ({ items }) => {
           </span>
 
           <span className="font-semibold">
-            ₹{gst.toFixed(2)}
+            ${gst.toFixed(2)}
           </span>
         </div>
 
@@ -53,7 +53,7 @@ const OrderSummary = ({ items }) => {
           <span>Total</span>
 
           <span>
-            ₹{total.toFixed(2)}
+            ${total.toFixed(2)}
           </span>
 
         </div>

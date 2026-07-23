@@ -54,7 +54,7 @@ const CartItem = ({ item }) => {
           </p>
 
           <h2 className="text-2xl font-bold text-blue-600">
-            ₹{(item.selectedPrice * item.quantity).toLocaleString()}
+            ${(item.selectedPrice * item.quantity).toLocaleString()}
           </h2>
 
         </div>

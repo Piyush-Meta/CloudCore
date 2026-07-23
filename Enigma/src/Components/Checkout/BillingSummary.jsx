@@ -23,12 +23,12 @@ const BillingSummary = () => {
 
         <div className="flex justify-between">
           <span>Subtotal</span>
-          <span>₹{subtotal.toFixed(2)}</span>
+          <span>${subtotal.toFixed(2)}</span>
         </div>
 
         <div className="flex justify-between">
           <span>GST</span>
-          <span>₹{gst.toFixed(2)}</span>
+          <span>${gst.toFixed(2)}</span>
         </div>
 
         <hr />
@@ -37,7 +37,7 @@ const BillingSummary = () => {
 
           <span>Total</span>
 
-          <span>₹{total.toFixed(2)}</span>
+          <span>${total.toFixed(2)}</span>
 
         </div>
 
