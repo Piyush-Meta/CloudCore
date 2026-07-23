@@ -19,7 +19,7 @@ const faqData = [
   },
   {
     id: 4,
-    question: "How do migrations work",
+question: "How do migrations work?",
     answer:
       "We offer free WordPress migrations. Depending on your plan, migrations range from one free migration to unlimited white-glove migrations handled by our engineers.",
   },

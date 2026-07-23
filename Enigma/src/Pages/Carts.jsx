@@ -1,42 +1,37 @@
 import { useSelector } from "react-redux";
 
+import CheckoutStepper from "../Components/Checkout/CheckoutStepper";
+import CartSection from "../Components/Checkout/CartSection";
+import OrderSummary from "../Components/Checkout/OrderSummary";
+import RecommendedProducts from "../Components/Checkout/RecommendedProducts.jsx";
+
 const Carts = () => {
-  const cartItems = useSelector(
-    (store) => store.cart.items
-  );
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className="max-w-6xl mx-auto mt-10 space-y-6">
-      {cartItems.map((item) => (
-        <div
-          key={`${item.id}-${item.billing}`}
-          className="rounded-xl border p-6"
-        >
-          <h2 className="text-2xl font-bold">
-            {item.title}
-          </h2>
+    <section className="mx-auto max-w-7xl px-6 py-12">
 
-          <p>{item.subtitle}</p>
+      <CheckoutStepper currentStep={0} />
 
-          <p>
-            Billing : {item.billing}
-          </p>
+      <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-3">
 
-          <p>
-            Price : ${item.selectedPrice}
-          </p>
+        <div className="lg:col-span-2">
 
-          <p>
-            Quantity : {item.quantity}
-          </p>
+          <h1 className="mb-8 text-3xl font-bold">
+            Review Your Cart
+          </h1>
 
-          <p className="font-bold">
-            Total :
-            ${item.selectedPrice * item.quantity}
-          </p>
+          <CartSection items={cartItems} />
+
         </div>
-      ))}
-    </div>
+
+        <OrderSummary items={cartItems} />
+
+      </div>
+
+      <RecommendedProducts />
+
+    </section>
   );
 };
 
