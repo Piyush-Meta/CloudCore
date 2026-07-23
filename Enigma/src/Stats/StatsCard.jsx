@@ -5,11 +5,11 @@ const StatsCard = ({ stat, isLast }) => {
         !isLast ? "border-r border-gray-200" : ""
       }`}
     >
-      <h2 className="text-5xl font-bold text-blue-600">
+      <h2 className="text-5xl font-bold text-white">
         {stat.value}
       </h2>
 
-      <p className="mt-2 text-sm font-medium text-gray-600">
+      <p className="mt-2 text-sm font-medium text-gray-300">
         {stat.title}
       </p>
     </div>

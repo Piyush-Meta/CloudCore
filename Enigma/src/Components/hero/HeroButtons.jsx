@@ -22,7 +22,7 @@ const HeroButtons = () => {
           className={`rounded-xl border px-8 py-4 font-semibold transition-all duration-300
  ${
             activeButton === button.id
-              ? "bg-blue-600 text-white border-blue-600 shadow-lg"
+              ? "bg-blue-900 text-white border-blue-600 shadow-lg"
               : "border-gray-300 bg-white text-gray-900 hover:bg-gray-100"
           }
           `}

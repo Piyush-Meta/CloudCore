@@ -15,7 +15,8 @@ import Security from "../Pages/Security";
 import Hosting from "../Pages/Hosting";
 import About from "../Pages/About";
 import Docs from "../Components/BillingCycle/Docs/Docs";
-import BillingSecurity from '../Components/BillingCycle/Billing/BillingSecurity'
+import BillingSecurity from "../Components/BillingCycle/Billing/BillingSecurity";
+import WordPressHosting from "../Pages/WordPressHosting";
 const AppRouter = createBrowserRouter([
     {
     path: "/",
@@ -32,6 +33,9 @@ const AppRouter = createBrowserRouter([
         {
             path:"dedicatedhosting",
             element: <DedicatedHosting />
+        },{
+           path:"wordpresshosting",
+           element: <WordPressHosting />
         },
         {
             path:"/servers",

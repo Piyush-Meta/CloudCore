@@ -25,7 +25,7 @@ const stats = [
 
 const Stat = () => {
   return (
-    <section className="border-t border-gray-200 bg-white py-14">
+    <section className="border-t border-gray-200 bg-blue-900 py-14">
       <div className="mx-auto grid max-w-7xl grid-cols-4">
         {stats.map((stat, index) => (
           <StatsCard
