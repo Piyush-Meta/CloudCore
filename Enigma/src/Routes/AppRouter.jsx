@@ -17,7 +17,7 @@ import About from "../Pages/About";
 import Docs from "../Components/BillingCycle/Docs/Docs";
 import BillingSecurity from "../Components/BillingCycle/Billing/BillingSecurity";
 import WordPressHosting from "../Pages/WordPressHosting";
-import BillingSecurity from '../Components/BillingCycle/Billing/BillingSecurity'
+//import BillingSecurity from '../Components/BillingCycle/Billing/BillingSecurity'
 import Billing from "../Pages/Billing";
 import Documentation from "../Pages/Documentation";
 import Review from "../Pages/Review";
